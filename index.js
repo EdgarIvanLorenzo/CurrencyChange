@@ -20,7 +20,7 @@ app.get('/change',(data,response)=>{
             var tag = soup.find('table');
             var filas=tag.contents[1]
             var h2=filas.find("h2").nextElement.nextElement.nextElement.text;
-            response.send("El valor del dolar es de: "+h2.toString());
+            response.send("El valor del dolar es de: $ "+h2.toString());
             console.log(h2);
         })
         .catch(error => {
